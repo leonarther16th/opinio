@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  statement: MyString
+  first_option: MyString
+  second_option: MyString
+  third_option: MyString
+  user_id: 1
+  meta_data: MyString
+  mete_data_type: MyString
+
+two:
+  statement: MyString
+  first_option: MyString
+  second_option: MyString
+  third_option: MyString
+  user_id: 1
+  meta_data: MyString
+  mete_data_type: MyString

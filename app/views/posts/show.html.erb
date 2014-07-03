@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Statement:</strong>
+  <%= @post.statement %>
+</p>
+
+<p>
+  <strong>First option:</strong>
+  <%= @post.first_option %>
+</p>
+
+<p>
+  <strong>Second option:</strong>
+  <%= @post.second_option %>
+</p>
+
+<p>
+  <strong>Third option:</strong>
+  <%= @post.third_option %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user_id %>
+</p>
+
+<p>
+  <strong>Meta data:</strong>
+  <%= @post.meta_data %>
+</p>
+
+<p>
+  <strong>Mete data type:</strong>
+  <%= @post.mete_data_type %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
