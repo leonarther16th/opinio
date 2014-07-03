@@ -11,5 +11,28 @@
  *= require_self
  *= require_tree .
  */
-@import "bootstrap-sprockets";
+
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$background_color: #e9eaed;
+$white: #ffffff;
+$pomegranate: #F22613;
+$nice-blue: #2574A9;
+$nice-blue2: #0896FF;
+$nice-red: #D91E18;
+$nice-orange: #D35400;
+$grid-gutter-width: 10px;
+$text-primary: #2C3E50;
+$nice-gray: #ECF0F1;
+$dark-gray: #95A5A6;
+
+body{
+	background-color: $background_color;
+	color: $text-primary;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.well{
+	background-color: $white;
+}

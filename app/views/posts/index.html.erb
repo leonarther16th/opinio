@@ -1,38 +1,39 @@
-<h1>Listing posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Statement</th>
-      <th>First option</th>
-      <th>Second option</th>
-      <th>Third option</th>
-      <th>User</th>
-      <th>Meta data</th>
-      <th>Mete data type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
+ 
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.statement %></td>
-        <td><%= post.first_option %></td>
-        <td><%= post.second_option %></td>
-        <td><%= post.third_option %></td>
-        <td><%= post.user_id %></td>
-        <td><%= post.meta_data %></td>
-        <td><%= post.mete_data_type %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="row">
+
+      <div class="well">
+      <div class="row">
+      <div class="col-lg-2">
+      <h5><%= current_user.name %></h5>
+      <%= image_tag(current_user.normalimage)%> 
+         </div>
+
+    <div class="col-lg-10">
+        <p><%= post.statement %></p>
+
+        <div class="btn-group btn-group-lg">
+        <button type="button" class="btn btn-primary"><%= post.first_option %></button>
+        <button type="button" class="btn btn-warning"><%= post.second_option %></button>
+        <button type="button" class="btn btn-danger"><%= post.third_option %></button>
+      </div>
+        
+        
+        
+        <%= post.user_id %>
+        <%= post.meta_data %>
+        <%= post.mete_data_type %>
+        <%= link_to 'Show', post %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+      </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+
 
 <br>
 

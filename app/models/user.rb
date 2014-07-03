@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
+  has_many :post
+  
 def self.from_omniauth(auth)
   where(auth.slice(:provider, :uid)).first_or_create do |user|
     user.email = auth.info.email
@@ -21,6 +23,23 @@ end
         user.email = data["email"] if user.email.blank?
       end
     end
+  end
+
+
+  def full_name
+  	if !self.first_name.blank?
+  		self.first_name + ' ' + self.last_name 
+  	else
+  		 'You!'
+  	end
+  end
+
+  def largeimage
+    "http://graph.facebook.com/#{self.uid}/picture?type=large"
+  end
+  
+  def normalimage
+    "http://graph.facebook.com/#{self.uid}/picture?height=200&type=normal&width=200"
   end
 
 end
