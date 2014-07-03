@@ -14,7 +14,7 @@
     
   </div>
     <ul class="nav navbar-nav navbar-right">
-        <li><img src=<%="#{current_user.image}?height=200&type=normal&width=200" %> > </li>
+        <li><img src=<%="#{current_user.image}?height=200&type=normal&width=200"  if user_signed_in? %> > </li>
         <li><%= link_to("#{current_user.name}", edit_user_registration_path(current_user)) if user_signed_in? %></li>
         <li><%= link_to("Sign out",  destroy_user_session_path, :method => 'delete')  if user_signed_in? %></li>
     </ul>

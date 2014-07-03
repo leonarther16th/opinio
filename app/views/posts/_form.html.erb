@@ -1,45 +1,23 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+<div class="well">
+  <div class="form-inputs">
+    
+      <%= f.input :statement, required: true, autofocus: true %>
+   
+   
+      <%= f.input :first_option, required: true %>
+    
+      <%= f.input :second_option, required: true %>
+    
+      <%= f.input :third_option, required: true %>
+   
+      <%= f.input :user_id %>
+    
+    <div class="form-actions">
+      <%= f.button :submit %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :statement %><br>
-    <%= f.text_field :statement %>
-  </div>
-  <div class="field">
-    <%= f.label :first_option %><br>
-    <%= f.text_field :first_option %>
-  </div>
-  <div class="field">
-    <%= f.label :second_option %><br>
-    <%= f.text_field :second_option %>
-  </div>
-  <div class="field">
-    <%= f.label :third_option %><br>
-    <%= f.text_field :third_option %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :meta_data %><br>
-    <%= f.text_field :meta_data %>
-  </div>
-  <div class="field">
-    <%= f.label :mete_data_type %><br>
-    <%= f.text_field :mete_data_type %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </div> 
+</div>
 <% end %>

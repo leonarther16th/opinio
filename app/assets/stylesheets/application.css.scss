@@ -35,4 +35,22 @@ body{
 
 .well{
 	background-color: $white;
+	margin-bottom:1px;
+}
+
+.btn-group{
+	width: 100%;
+	.btn{
+		width:33.3%;
+	}
+}
+
+.post-action{
+	float:right;
+	padding-top: 10px;
+	font-size: .7em;
+	.action-btn
+	{
+		padding-left:2px;
+	}
 }
