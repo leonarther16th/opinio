@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :post
+  has_many :vote
   
 def self.from_omniauth(auth)
   where(auth.slice(:provider, :uid)).first_or_create do |user|

@@ -20,6 +20,24 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
   end
 
+  def vote
+    @post = Post.find(params[:id])
+    @vote = Vote.new
+    @vote.user = current_user
+    @vote.post = @post
+    @vote.option = params[:option]
+    respond_to do |format|
+      if @vote.save
+          format.html { redirect_to @post, notice: 'Post was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @post }
+          format.js {}
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
+    end
+  end
+
   # GET /posts/1/edit
   def edit
   end
@@ -28,9 +46,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    
 
     respond_to do |format|
-      if @post.save
+      if @post.save 
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
         format.js {}
@@ -75,5 +94,9 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:statement, :first_option, :second_option, :third_option, :user_id, :meta_data, :mete_data_type)
+    end
+
+    def vote_params
+      params.require(:vote).permit(:post_id, :option)
     end
 end

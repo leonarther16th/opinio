@@ -8,7 +8,8 @@
           <span class='post-statement'><%= post.statement %></span>
 
            <div class='post-action pull-right'>
-           <%= link_to '', edit_post_path(post)  , class: 'action-btn glyphicon glyphicon-thumbs-up'%>
+
+           <%= link_to '', edit_post_path(post)  , class: 'action-btn glyphicon glyphicon-thumbs-up' %>
             <%= link_to '', post  , class: 'action-btn glyphicon glyphicon-eye-open' %>
             <%= link_to '', edit_post_path(post)  , class: 'action-btn glyphicon glyphicon-edit'%>
             <%= link_to '', post, method: :delete,  class: 'action-btn glyphicon glyphicon-trash', remote: true %>
@@ -18,9 +19,21 @@
           </p>
 
           <div class='btn-group btn-group-sm'>
-            <button type='button' class='btn btn-primary'><%= post.first_option %></button>
-            <button type='button' class='btn btn-primary'><%= post.second_option %></button>
-            <button type='button' class='btn btn-primary'><%= post.third_option %></button>
+          <% @vote = current_user.vote.find_by_post_id(post.id) %>
+
+
+          
+
+          <% if @vote %>
+            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn btn-primary', id: "post#{post.id} op1", remote: true, disabled:'disabled' %> 
+            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn btn-primary', id: "post#{post.id} op2", remote: true, disabled:'disabled' %> 
+            <%= link_to post.second_option, vote_post_path(post, option: 3), type: 'button', class: 'btn btn-primary', id: "post#{post.id} op3", remote: true, disabled:'disabled' %> 
+          <% else %>
+            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn btn-primary', id: "post#{post.id} op1", remote: true %> 
+            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn btn-primary', id: "post#{post.id} op2", remote: true %> 
+            <%= link_to post.second_option, vote_post_path(post, option: 3), type: 'button', class: 'btn btn-primary', id: "post#{post.id} op3", remote: true %> 
+          <% end %>
+
           </div>
 
 
