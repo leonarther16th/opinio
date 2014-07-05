@@ -10,42 +10,9 @@
 <div class="col-golden-lg ">
 <div class="mywell">
 
-
-  <% @posts.each do |post| %>
-
-
+<%= render @posts %>
 
   
-    <div class="well" >
-     
-
-          <img class="post-img" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/t1.0-1/c0.0.50.50/p50x50/2423_130188370022_115_n.jpg" alt="">
-          <span class="post-user-name"><strong> <%= post.user.name %></strong></span>
-           <span class="time"><%= distance_of_time_in_words_to_now(post.created_at) %> ago </span><br>
-          <span class="post-statement"><%= post.statement %></span>
-
-           <div class="post-action pull-right">
-           <%= link_to '', edit_post_path(post)  , class: "action-btn glyphicon glyphicon-thumbs-up"%>
-            <%= link_to '', post  , class: "action-btn glyphicon glyphicon-eye-open" %>
-            <%= link_to '', edit_post_path(post)  , class: "action-btn glyphicon glyphicon-edit"%>
-            <%= link_to '', post, method: :delete, data: { confirm: 'Are you sure?' } , class: "action-btn glyphicon glyphicon-trash" %>
-          </div>
-          <p>
-              
-          </p>
-
-          <div class="btn-group btn-group-sm">
-            <button type="button" class="btn btn-primary"><%= post.first_option %></button>
-            <button type="button" class="btn btn-primary"><%= post.second_option %></button>
-            <button type="button" class="btn btn-primary"><%= post.third_option %></button>
-          </div>
-
-
-         
-        </div>
-      
-
-  <% end %>
 </div>
 </div>
 </div>

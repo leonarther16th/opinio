@@ -1,3 +1,11 @@
 $("#new-post").addClass('hider');
 $("#new-post-btn").removeClass('hider');
-$(".mywell").append("Wohoooo");
+
+
+
+//$("<%= escape_javascript(render @post) %>").appendTo(".mywell");
+$('.mywell').before("<%= escape_javascript(render @post) %>");
+$("#post_statement").val('');
+$("#post_first_option").val('');
+$("#post_second_option").val('');
+$("#post_third_option").val('');
