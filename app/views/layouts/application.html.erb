@@ -3,7 +3,7 @@
 <head>
   <title>Opinio</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <ul class="nav navbar-nav navbar-right">
         <li><img src=<%="#{current_user.image}?height=200&type=normal&width=200"  if user_signed_in? %> > </li>
         <li><%= link_to("#{current_user.name}", edit_user_registration_path(current_user)) if user_signed_in? %></li>
-        <li><%= link_to("Sign out",  destroy_user_session_path, :method => 'delete')  if user_signed_in? %></li>
+        <li><%= link_to("",  destroy_user_session_path, :method => 'delete', class: "glyphicon glyphicon-log-in")  if user_signed_in? %></li>
     </ul>
 
   </div>
@@ -40,6 +40,6 @@
 	</div>
 </div>
 
-
-
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</body>
 </html>

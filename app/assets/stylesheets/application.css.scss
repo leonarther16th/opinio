@@ -35,7 +35,21 @@ body{
 
 .well{
 	background-color: $white;
-	margin-bottom:1px;
+	margin-bottom:0px;
+	margin-top: 0;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid darken($nice-gray,6);
+	padding: 12px;
+}
+
+.well:first-child{
+	border-radius: 4px 4px 0 0 ;
+
+}
+.well:last-child{
+	border-radius: 0 0 4px 4px ;
+
 }
 
 .btn-group{
@@ -46,11 +60,62 @@ body{
 }
 
 .post-action{
-	float:right;
-	padding-top: 10px;
-	font-size: .7em;
+	//float:right;
+	padding-bottom: 6px;
+	font-size: .8em;
+	
 	.action-btn
 	{
-		padding-left:2px;
+		padding-left:4px;
+		color: lighten($nice-blue,30);
+	}
+	.glyphicon{
+
 	}
 }
+
+.post-action:after{
+	content:"  ";
+}
+.focus{
+	background-color: lighten($nice-gray,4);
+}
+
+.hider{
+	position: fixed;
+	top: -2000px;
+}
+
+.post-img{
+	float:left;
+	border-radius: 8px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+
+}
+.time{
+	color:lighten($nice-blue,20);
+	font-size:.7em;
+	padding-left: 2px;
+	margin-top:8px;
+	display: inline-block;
+
+}
+.post-user-name{
+	
+	color:darken($nice-blue,2);
+	display: inline-block;
+}
+
+.post-statement{
+	padding-top:2px;
+	display: block;
+}
+
+.btn-group{
+	width: 100%;
+	margin: 0;
+	border-radius: 0;
+	padding-bottom: px;
+}
+
