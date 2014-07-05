@@ -14,4 +14,16 @@ $(".well").hover(function(){
 	console.log("out");
 });
 
+var counter = 0;
 
+$(".btn-primary").click(function(){
+	counter += 1;
+	$(this).html(counter);
+});
+
+$("#new-post").addClass('hider');
+
+$("#new-post-btn").click(function(){
+	$(this).addClass('hider');
+	$("#new-post").removeClass('hider');
+});
