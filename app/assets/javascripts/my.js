@@ -4,20 +4,20 @@ $(".well").hover(function(){
 	$(this).addClass("focus");
 	//$(this).children(".post-action").toggleClass("hider");
 	$(this).children(".btn-group").toggleClass("hider");
-	console.log("in");
+	
 
 	
 }, function(){
 	$(this).removeClass("focus");
 	//$(this).children(".post-action").toggleClass("hider");
 	$(this).children(".btn-group").toggleClass("hider");
-	console.log("out");
+	
 });
 
-var counter = 0;
+
 
 $(".btn-primary").click(function(){
-	counter += 1;
+	
 	//$(this).html(counter);
 	$(this).attr('disabled','disabled').append(" <span class='glyphicon glyphicon-ok'></span> <span class='badge pull-right'>70%</span>").addClass('btn-success');
 	$(this).prev().attr('disabled','disabled').append(" <span class='glyphicon glyphicon-remove'></span> <span class='badge pull-right'>65%</span>").addClass('btn-danger');
@@ -29,6 +29,8 @@ $(".btn-primary").click(function(){
 $("#new-post").addClass('hider');
 
 $("#new-post-btn").click(function(){
-	$(this).addClass('hider');
-	$("#new-post").removeClass('hider');
+	
+	$("#new-post").toggleClass('hider');
 });
+
+$(".test").removeClass("hider");

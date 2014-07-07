@@ -10,14 +10,27 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
+
   <div class="navbar-header">
     <a class="navbar-brand" href="#"><strong>Opinio</strong></a>
+
   </div>
+
+
+
     <ul class="nav navbar-nav navbar-right">
         <li><img src=<%="#{current_user.image}?height=20&type=normal&width=20"  if user_signed_in? %> > </li>
         <li><%= link_to("#{current_user.name}", edit_user_registration_path(current_user)) if user_signed_in? %></li>
         <li><%= link_to("",  destroy_user_session_path, :method => 'delete', class: "glyphicon glyphicon-log-in")  if user_signed_in? %></li>
     </ul>
+
+     <form role="search" class="navbar-form navbar-right">
+  <div class="form-group">
+    <input type="text" placeholder="Search" class="form-control">
+  </div>
+
+</form>
+
 
   </div>
 </nav>

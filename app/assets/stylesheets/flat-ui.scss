@@ -1,49 +1,49 @@
 @font-face {
   font-family: 'Lato';
-  src: font-url('/assets/lato-black.eot');
-  src: font-url('/assets/lato-black.eot?#iefix') format('embedded-opentype'), font-url('/assets/lato-black.woff') format('woff'), font-url('/assets/lato-black.ttf') format('truetype'), font-url('/assets/lato-black.svg#latoblack') format('svg');
+  src: font-url('lato-black.eot');
+  src: font-url('lato-black.eot?#iefix') format('embedded-opentype'), font-url('lato-black.woff') format('woff'), font-url('lato-black.ttf') format('truetype'), font-url('lato-black.svg#latoblack') format('svg');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
-  src: font-url('/assets/lato-bold.eot');
-  src: font-url('/assets/lato-bold.eot?#iefix') format('embedded-opentype'), font-url('/assets/lato-bold.woff') format('woff'), font-url('/assets/lato-bold.ttf') format('truetype'), font-url('/assets/lato-bold.svg#latobold') format('svg');
+  src: font-url('lato-bold.eot');
+  src: font-url('lato-bold.eot?#iefix') format('embedded-opentype'), font-url('lato-bold.woff') format('woff'), font-url('lato-bold.ttf') format('truetype'), font-url('lato-bold.svg#latobold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
-  src: font-url('/assets/lato-bolditalic.eot');
-  src: font-url('/assets/lato-bolditalic.eot?#iefix') format('embedded-opentype'), font-url('/assets/lato-bolditalic.woff') format('woff'), font-url('/assets/lato-bolditalic.ttf') format('truetype'), font-url('/assets/lato-bolditalic.svg#latobold-italic') format('svg');
+  src: font-url('lato-bolditalic.eot');
+  src: font-url('lato-bolditalic.eot?#iefix') format('embedded-opentype'), font-url('lato-bolditalic.woff') format('woff'), font-url('lato-bolditalic.ttf') format('truetype'), font-url('lato-bolditalic.svg#latobold-italic') format('svg');
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: 'Lato';
-  src: font-url('/assets/lato-italic.eot');
-  src: font-url('/assets/lato-italic.eot?#iefix') format('embedded-opentype'), font-url('/assets/lato-italic.woff') format('woff'), font-url('/assets/lato-italic.ttf') format('truetype'), font-url('/assets/lato-italic.svg#latoitalic') format('svg');
+  src: font-url('lato-italic.eot');
+  src: font-url('lato-italic.eot?#iefix') format('embedded-opentype'), font-url('lato-italic.woff') format('woff'), font-url('lato-italic.ttf') format('truetype'), font-url('lato-italic.svg#latoitalic') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'Lato';
-  src: font-url('/assets/lato-light.eot');
-  src: font-url('/assets/lato-light.eot?#iefix') format('embedded-opentype'), font-url('/assets/lato-light.woff') format('woff'), font-url('/assets/lato-light.ttf') format('truetype'), font-url('/assets/lato-light.svg#latolight') format('svg');
+  src: font-url('lato-light.eot');
+  src: font-url('lato-light.eot?#iefix') format('embedded-opentype'), font-url('lato-light.woff') format('woff'), font-url('lato-light.ttf') format('truetype'), font-url('lato-light.svg#latolight') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
-  src: font-url('/assets/lato-regular.eot');
-  src: font-url('/assets/lato-regular.eot?#iefix') format('embedded-opentype'), font-url('/assets/lato-regular.woff') format('woff'), font-url('/assets/lato-regular.ttf') format('truetype'), font-url('/assets/lato-regular.svg#latoregular') format('svg');
+  src: font-url('lato-regular.eot');
+  src: font-url('lato-regular.eot?#iefix') format('embedded-opentype'), font-url('lato-regular.woff') format('woff'), font-url('lato-regular.ttf') format('truetype'), font-url('lato-regular.svg#latoregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Flat-UI-Icons";
-  src: font-url('/assets/flat-ui-icons-regular.eot');
-  src: font-url('/assets/flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), font-url('/assets/flat-ui-icons-regular.woff') format('woff'), font-url('/assets/flat-ui-icons-regular.ttf') format('truetype'), font-url('/assets/flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
+  src: font-url('flat-ui-icons-regular.eot');
+  src: font-url('flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), font-url('flat-ui-icons-regular.woff') format('woff'), font-url('flat-ui-icons-regular.ttf') format('truetype'), font-url('flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -200,10 +200,10 @@ you can use the generic selector below, but it's slower:
 }
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.72222;
   color: #34495e;
-  background-color: #F0F1F2;
+  background-color: #e9eaed;
 }
 a {
   color: #16a085;
@@ -2243,10 +2243,10 @@ select[multiple].navbar-form .btn {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .navbar-default {
-  background-color: #ecf0f1;
+  background-color: #446CB3;
 }
 .navbar-default .navbar-brand {
-  color: #34495e;
+  color: #ffffff;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -2270,17 +2270,17 @@ select[multiple].navbar-form .btn {
   border-width: 2px;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #34495e;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #1abc9c;
+  color: darken(#e9eaed,30);
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #1abc9c;
+  color: #e9eaed;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a,
@@ -3477,8 +3477,8 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   position: relative;
   text-align: left;
   width: 80px;
-  -webkit-mask: font-url('../images/switch/mask.png') 0 0 no-repeat;
-  mask: font-url('../images/switch/mask.png') 0 0 no-repeat;
+  -webkit-mask: image-url('/switch/mask.png') 0 0 no-repeat;
+  mask: image-url('/switch/mask.png') 0 0 no-repeat;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3569,8 +3569,8 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
 }
 .switch-square {
   border-radius: 6px;
-  -webkit-mask: font-url('../images/switch/mask.png') 0 0 no-repeat;
-  mask: font-url('../images/switch/mask.png') 0 0 no-repeat;
+  -webkit-mask: image-url('/switch/mask.png') 0 0 no-repeat;
+  mask: image-url('/switch/mask.png') 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
   border-color: #7f8c9a;
@@ -3763,7 +3763,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   text-align: center;
 }
 .tile.tile-hot:before {
-  background: font-url(../images/tile/ribbon.png) 0 0 no-repeat;
+  background:image- url(/tile/ribbon.png) 0 0 no-repeat;
   background-size: 82px 82px;
   content: '';
   height: 82px;
@@ -3792,7 +3792,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .tile.tile-hot:before {
-    background-image: font-url(../images/tile/ribbon-2x.png);
+    background-image:image- url(/tile/ribbon-2x.png);
   }
 }
 .todo {
@@ -3808,7 +3808,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   border-radius: 0 0 6px 6px;
 }
 .todo li {
-  background: #34495e font-url(../images/todo/todo.png) 92% center no-repeat;
+  background: #34495eimage- url(/todo/todo.png) 92% center no-repeat;
   background-size: 20px 20px;
   cursor: pointer;
   font-size: 14px;
@@ -3827,7 +3827,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   padding-bottom: 21px;
 }
 .todo li.todo-done {
-  background: transparent font-url(../images/todo/done.png) 92% center no-repeat;
+  background: transparentimage- url(/todo/done.png) 92% center no-repeat;
   background-size: 20px 20px;
   color: #1abc9c;
 }
@@ -3898,10 +3898,10 @@ input.todo-search-field.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .todo li {
-    background-image: font-url(../images/todo/todo-2x.png);
+    background-image:image- url(/todo/todo-2x.png);
   }
   .todo li.todo-done {
-    background-image: font-url(../images/todo/done-2x.png);
+    background-image:image- url(/todo/done-2x.png);
   }
 }
 .video-js {
@@ -4104,7 +4104,7 @@ body.vjs-full-window {
   margin: .5em auto 0;
 }
 .vjs-mute-control {
-  background: font-url(../images/video/volume-full.png) center -48px no-repeat;
+  background:image- url(/video/volume-full.png) center -48px no-repeat;
   background-size: 16px 64px;
   cursor: pointer !important;
   position: absolute;
@@ -4117,10 +4117,10 @@ body.vjs-full-window {
 }
 .vjs-mute-control.vjs-vol-0,
 .vjs-mute-control.vjs-vol-0 div {
-  background-image: font-url(../images/video/volume-off.png);
+  background-image:image- url(/video/volume-off.png);
 }
 .vjs-mute-control div {
-  background: #273747 font-url(../images/video/volume-full.png) no-repeat center 2px;
+  background: #273747image- url(/video/volume-full.png) no-repeat center 2px;
   background-size: 16px 64px;
   height: 18px;
   -webkit-transition: opacity 0.25s;
@@ -4227,7 +4227,7 @@ body.vjs-full-window {
   float: right;
 }
 .vjs-fullscreen-control {
-  background-image: font-url(../images/video/fullscreen.png);
+  background-image:image- url(/video/fullscreen.png);
   background-position: center -47px;
   background-size: 15px 64px;
   cursor: pointer !important;
@@ -4241,7 +4241,7 @@ body.vjs-full-window {
 }
 .vjs-fullscreen-control div {
   height: 18px;
-  background: font-url(../images/video/fullscreen.png) no-repeat center 2px;
+  background:image- url(/video/fullscreen.png) no-repeat center 2px;
   background-size: 15px 64px;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
@@ -4355,7 +4355,7 @@ body.vjs-full-window {
   animation: sharp 2s ease infinite;
 }
 .login {
-  background: font-url(../images/login/imac.png) 0 0 no-repeat;
+  background:image- url(/login/imac.png) 0 0 no-repeat;
   background-size: 940px 778px;
   color: #ffffff;
   margin-bottom: 77px;
@@ -4442,7 +4442,7 @@ body.vjs-full-window {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .login {
-    background-image: font-url(../images/login/imac-2x.png);
+    background-image:image- url(/login/imac-2x.png);
   }
 }
 footer {

@@ -1,28 +1,48 @@
 
 <div class="row">
 <div class="col-golden-sm ">
-<div class="well test" >
+<div class="well" >
 
 
 
 
-  <button class="btn btn-sm btn-default" type="button">
-      Votes <span class="badge"><%= @votes.count %></span>
-   </button>
-   <button class="btn btn-sm btn-default" type="button">
-      Monitor <span class="badge">8</span>
-   </button>
-   <button class="btn btn-sm btn-default" type="button">
-      Friends <span class="badge"><%= @votes.count + rand(10) %></span>
-   </button>
+
+          <div class="btn-toolbar">
+                <div class="btn-group test">
+                  <a class="btn btn-success btn-embossed" href="#fakelink"><span class="fui-time"></span>
+                  	 <span class="badge"><%= @votes.count %></span>
+                  </a>
+                 
+                  <a class="btn btn-success btn-embossed" href="#fakelink"><span class="fui-heart">
+                  	 <span class="badge"><%= @votes.count + rand(10) %></span>
+                  </span></a>
+                  <a class="btn btn-success btn-embossed" href="#fakelink"><span class="fui-eye"></span>
+                  	 <span class="badge">8</span>
+                  </a>
+                  <%= link_to new_post_path, remote: true, class:"btn btn-success btn-embossed", id: "new-post-btn" do %>
+                  	<span class="fui-new"></span>
+                  <% end %>
+                </div>
+              </div> <!-- /toolbar -->
+                
+
+
 
 
 <hr>
 
 <%= render 'form' %>
-<%= link_to 'New Post', new_post_path, remote: true, class:"btn btn-sm btn-success", id: "new-post-btn" %>
+
 
 </div>
+<div class="tile">
+            <img src=<%= asset_path("icons/svg/compas.svg") %> alt="Compas" class="tile-image big-illustration">
+            <h3 class="tile-title">Web Oriented</h3>
+            <p>100% convertable to HTML/CSS layout.</p>
+            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Get Pro</a>
+          </div>
+
+
 </div>
 <div class="col-golden-lg ">
 <div class="mywell">

@@ -16,6 +16,8 @@ end
 gem 'devise'
 gem 'omniauth-facebook'
 
+
+
 gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 
 gem 'bootstrap-sass', '~> 3.1.1'
