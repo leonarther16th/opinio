@@ -2,6 +2,23 @@
 <div class="row">
 <div class="col-golden-sm ">
 <div class="well test" >
+
+
+
+
+  <button class="btn btn-sm btn-default" type="button">
+      Votes <span class="badge"><%= @votes.count %></span>
+   </button>
+   <button class="btn btn-sm btn-default" type="button">
+      Monitor <span class="badge">8</span>
+   </button>
+   <button class="btn btn-sm btn-default" type="button">
+      Friends <span class="badge"><%= @votes.count + rand(10) %></span>
+   </button>
+
+
+<hr>
+
 <%= render 'form' %>
 <%= link_to 'New Post', new_post_path, remote: true, class:"btn btn-sm btn-success", id: "new-post-btn" %>
 

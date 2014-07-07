@@ -7,6 +7,7 @@ class PostsController < ApplicationController
     @posts = Post.all
     @post = Post.new
     @post.user_id = current_user.id
+    @votes = current_user.vote
   end
 
   # GET /posts/1
