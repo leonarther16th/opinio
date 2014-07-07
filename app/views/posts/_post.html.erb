@@ -24,14 +24,22 @@
 
           
 
-          <% if @vote %>
-            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op1", remote: true, disabled:'disabled' %> 
-            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op2", remote: true, disabled:'disabled' %> 
-            <%= link_to post.third_option, vote_post_path(post, option: 3), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op3", remote: true, disabled:'disabled' %> 
+          <% if @vote  %>
+            <%= link_to vote_post_path(post, option: 1), type: 'button', class: "btn vote #{@vote.btn_class(1)}", id: "post#{post.id} op1", remote: true, disabled:'disabled' do %>
+              <%= post.first_option %> <span class='<%= @vote.btn_icon(1) %>' > </span> <span class='badge pull-right'> <%= num_votes(post.id, 1) %>% </span>
+            <% end %> 
+
+            <%= link_to vote_post_path(post, option: 2), type: 'button', class: "btn vote #{@vote.btn_class(2)}", id: "post#{post.id} op2", remote: true, disabled:'disabled' do %> <%= post.second_option %> <span class='<%= @vote.btn_icon(2) %>' > </span> <span class='badge pull-right'> <%= num_votes(post.id, 2) %>% </span>
+            <% end %> 
+
+            <%= link_to vote_post_path(post, option: 3), type: 'button', class: "btn vote #{@vote.btn_class(3)}", id: "post#{post.id} op3", remote: true, disabled:'disabled' do %>
+              <%= post.third_option %> <span class='<%= @vote.btn_icon(3) %>' > </span> <span class='badge pull-right'> <%= num_votes(post.id, 3) %>% </span>
+            <% end %>  
+
           <% else %>
-            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op1", remote: true %> 
-            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op2", remote: true %> 
-            <%= link_to post.third_option, vote_post_path(post, option: 3), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op3", remote: true %> 
+            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn vote btn-info', id: "post#{post.id} op1", remote: true %> 
+            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn vote btn-info', id: "post#{post.id} op2", remote: true %> 
+            <%= link_to post.third_option, vote_post_path(post, option: 3), type: 'button', class: 'btn vote btn-info', id: "post#{post.id} op3", remote: true %> 
           <% end %>
 
           </div>

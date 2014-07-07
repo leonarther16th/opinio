@@ -16,7 +16,7 @@ $(".well").hover(function(){
 
 
 
-$(".btn-primary").click(function(){
+$(".vote").click(function(){
 	
 	//$(this).html(counter);
 	$(this).attr('disabled','disabled').append(" <span class='glyphicon glyphicon-ok'></span> <span class='badge pull-right'>70%</span>").addClass('btn-success');
