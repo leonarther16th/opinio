@@ -6,6 +6,7 @@
  * A quick project by Philippe Dionne (http://phildionne.com)
  * Much love to @mdo, @fat and every collaborators to Bootstrap
  */
+ @media (min-width: 768px){
 .col-golden-sm {
   float: left;
   position: relative;
@@ -14,6 +15,9 @@
   padding-right: 2px;
   width: 25%;
 }
+}
+
+@media (min-width: 768px){
 .col-golden-lg {
   float: left;
   position: relative;
