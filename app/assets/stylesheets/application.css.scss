@@ -148,3 +148,17 @@ body{
 .form-group{
 	margin-bottom: 0 !important;
 }
+
+
+.progress-vertical {
+    width: 40%;
+    height: 200px !important;
+    position: relative;
+}
+.progress-vertical .bar {
+    width: 100% !important;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}

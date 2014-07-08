@@ -6,7 +6,7 @@ class Vote < ActiveRecord::Base
 		if self.option == opt_num
 			return 'btn-success'
 		else
-			return 'btn-danger'
+			return 'btn-default'
 		end
 	end
 

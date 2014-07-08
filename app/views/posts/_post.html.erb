@@ -2,7 +2,7 @@
     <div class='well' id="post-<%= post.id %>" >
      
 
-          <img class='post-img' src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/t1.0-1/c0.0.50.50/p50x50/2423_130188370022_115_n.jpg' alt='>
+          <img class='post-img' src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/t1.0-1/c0.0.50.50/p50x50/2423_130188370022_115_n.jpg' alt=''>
           <span class='post-user-name'><strong> <%= post.user.name %></strong></span>
            <span class='time'><%= distance_of_time_in_words_to_now(post.created_at) %> ago </span><br>
           <span class='post-statement'><%= post.statement %></span>
@@ -25,15 +25,40 @@
           
 
           <% if @vote  %>
-            <%= link_to vote_post_path(post, option: 1), type: 'button', class: "btn vote #{@vote.btn_class(1)}", id: "post#{post.id} op1", remote: true, disabled:'disabled' do %>
-              <%= post.first_option %> <span class='<%= @vote.btn_icon(1) %>' > </span> <span class='badge pull-right'> <%= num_votes(post.id, 1) %>% </span>
+
+                    <div class="col-lg-4 tile" style="background-color: #f8f9fa">
+                    
+          <div style="display:inline;width:33.33%;height:20px;">
+          <canvas width="33.33%" height="20px"></canvas>
+          <input class="knob" data-fgcolor="#e67e22" data-thickness=".4" data-readonly="true" value="<%= option_percentage(post.id, 1) %>" readonly="readonly" data-width="80" data-height="80" style="width: 33.3%; height: 80px; position: absolute; vertical-align: middle; margin-top: 20px;  border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-size: 13px; line-height: normal; font-family: Arial; text-align: center; color: #d35400; padding: 0px; -webkit-appearance: none; background: none;">
+          </div>
+
+          </div>
+
+          <div class="col-lg-4 tile" style="background-color: #f8f9fa">
+          <div style="display:inline;width:33.33%;height:20px;">
+          <canvas width="33.33%" height="20px"></canvas>
+          <input class="knob" data-fgcolor="#27ae60" data-thickness=".4" data-readonly="true" value="<%= option_percentage(post.id, 2) %>" readonly="readonly" data-width="80" data-height="80" style="width: 33.3%; height: 80px; position: absolute; vertical-align: middle; margin-top: 20px;  border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-size: 13px; line-height: normal; font-family: Arial; text-align: center; color: #d35400; padding: 0px; -webkit-appearance: none; background: none;">
+          </div>
+          </div>
+
+          <div class="col-lg-4 tile" style="background-color: #f8f9fa">
+          <div style="display:inline;width:33.33%;height:20px;">
+          <canvas width="33.33%" height="20px"></canvas>
+          <input class="knob" data-fgcolor="#3498db" data-thickness=".4" data-readonly="true" value="<%= option_percentage(post.id, 3) %>" readonly="readonly" data-width="80" data-height="80" style="width: 33.3%; height: 100px; position: absolute; vertical-align: middle; margin-top: 20px;  border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-size: 13px; line-height: normal; font-family: Arial; text-align: center; color: #d35400; padding: 0px; -webkit-appearance: none; background: none;">
+          </div>
+          </div>
+
+            <%= link_to vote_post_path(post, option: 1), type: 'button',  class: "btn vote #{@vote.btn_class(1)}", id: "post#{post.id} op1", remote: true, disabled:'disabled' do %>
+              <%= post.first_option %> <span class='<%= @vote.btn_icon(1) %>' > </span> 
             <% end %> 
 
-            <%= link_to vote_post_path(post, option: 2), type: 'button', class: "btn vote #{@vote.btn_class(2)}", id: "post#{post.id} op2", remote: true, disabled:'disabled' do %> <%= post.second_option %> <span class='<%= @vote.btn_icon(2) %>' > </span> <span class='badge pull-right'> <%= num_votes(post.id, 2) %>% </span>
+            <%= link_to vote_post_path(post, option: 2), type: 'button', class: "btn vote #{@vote.btn_class(2)}", id: "post#{post.id} op2", remote: true, disabled:'disabled' do %> 
+              <%= post.second_option %> <span class='<%= @vote.btn_icon(2) %>' > </span> 
             <% end %> 
 
-            <%= link_to vote_post_path(post, option: 3), type: 'button', class: "btn vote #{@vote.btn_class(3)}", id: "post#{post.id} op3", remote: true, disabled:'disabled' do %>
-              <%= post.third_option %> <span class='<%= @vote.btn_icon(3) %>' > </span> <span class='badge pull-right'> <%= num_votes(post.id, 3) %>% </span>
+            <%= link_to vote_post_path(post, option: 3), type: 'button',  class: "btn vote #{@vote.btn_class(3)}", id: "post#{post.id} op3", remote: true, disabled:'disabled' do %>
+              <%= post.third_option %> <span class='<%= @vote.btn_icon(3) %>' > </span> 
             <% end %>  
 
           <% else %>
@@ -43,6 +68,8 @@
           <% end %>
 
           </div>
+
+
 
 
          

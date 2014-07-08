@@ -61,3 +61,7 @@ onExceed: function(count) {},
 onDeceed: function(count) {},
 customFields: {},}); // key value pairs of custom options to be added to the counter such as class, data attributes etc.
 });
+
+$(function() {
+    $(".knob").knob();
+});
