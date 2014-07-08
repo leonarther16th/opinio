@@ -134,3 +134,17 @@ body{
         position: fixed;
     }
 }
+
+.text-counters{
+	font-size: .5em;
+	color: #737373;
+}
+
+.text-counters-error{
+	font-size: .5em;
+	color: $nice-red;
+}
+
+.form-group{
+	margin-bottom: 0 !important;
+}
