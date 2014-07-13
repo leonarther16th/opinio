@@ -64,6 +64,10 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="fui-"] {
 */
+
+$primary-color: #2c3e50;
+$hover-color: #6C7A89;
+
 .fui-arrow-right,
 .fui-arrow-left,
 .fui-cmd,
@@ -206,14 +210,14 @@ body {
   background-color: #e9eaed;
 }
 a {
-  color: #16a085;
+  color: $primary-color;
   text-decoration: none;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 a:hover,
 a:focus {
-  color: #1abc9c;
+  color: $hover-color;
   text-decoration: none;
 }
 a:focus {
@@ -606,7 +610,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #1abc9c;
+  background-color: $primary-color;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -614,7 +618,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #48c9b0;
+  background-color: $hover-color;
   border-color: #48c9b0;
 }
 .btn-primary:active,
@@ -2095,6 +2099,8 @@ select[multiple].navbar-input {
   font-size: 13px;
   line-height: 1.4;
   border-radius: 6px;
+  width: 583px;
+  margin-left: -429px;
 }
 select.navbar-form .form-control,
 select.navbar-form .input-group-addon,
@@ -2243,10 +2249,8 @@ select[multiple].navbar-form .btn {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .navbar-default {
-  background-color: #2980B9;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
--moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  background-color: $primary-color;
+
 }
 .navbar-default .navbar-brand {
   color: #ffffff;

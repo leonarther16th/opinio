@@ -4,14 +4,14 @@
   <div class="form-inputs">
     <hr>
 
-      <%= f.input :statement, required: true, autofocus: true, as: :text, input_html: {  "row" => "4", id: "statement_textarea", maxlength: 160} %>
+      <%= f.input :statement, required: true, autofocus: true, as: :text, label: false, input_html: {  "row" => "4", id: "statement_textarea", maxlength: 160, placeholder: "Statement"} %>
 
    
-      <%= f.input :first_option, required: true, input_html: { maxlength: 20, class: "option_field" } %>
+      <%= f.input :first_option, required: true, label: false, input_html: { maxlength: 20, class: "option_field", placeholder: "First option" } %>
     
-      <%= f.input :second_option, required: true, input_html: { maxlength: 20, class: "option_field" } %>
+      <%= f.input :second_option, required: true, label: false, input_html: { maxlength: 20, class: "option_field", placeholder: "Second option" } %>
     
-      <%= f.input :third_option, required: true, input_html: { maxlength: 20, class: "option_field" } %>
+      <%= f.input :third_option, required: true, label: false, input_html: { maxlength: 20, class: "option_field", placeholder: "Third option" } %>
    
       <%= f.hidden_field :user_id %>
     

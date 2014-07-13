@@ -27,6 +27,7 @@ $grid-gutter-width: 10px;
 $text-primary: #2C3E50;
 $nice-gray: #ECF0F1;
 $dark-gray: #95A5A6;
+$primary-color: #2c3e50;
 
 body{
 	background-color: $background_color;
@@ -45,6 +46,9 @@ body{
 	border-radius: 0;
 	border-bottom: 1px solid darken($nice-gray,6);
 	padding: 12px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	
 }
 
 .well:first-child{
@@ -74,7 +78,7 @@ body{
 	.action-btn
 	{
 		padding-left:4px;
-		color: lighten($nice-blue,30);
+		color: lighten($primary-color,30);
 	}
 	.glyphicon{
 
@@ -101,7 +105,7 @@ body{
 
 }
 .time{
-	color:lighten($nice-blue,20);
+	color:lighten($primary-color,20);
 	font-size:.7em;
 	padding-left: 2px;
 	margin-top:8px;
@@ -110,7 +114,7 @@ body{
 }
 .post-user-name{
 	
-	color:darken($nice-blue,2);
+	color:$primary-color;
 	display: inline-block;
 }
 
@@ -161,4 +165,26 @@ body{
     bottom: 0;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
+}
+
+.headroom {
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+.btn-primary .badge{
+	color: $primary-color;
+}
+
+.logo {
+  display: block;
+  text-indent: -9999px;
+  width: 230px;
+  height: 25px;
+  background: image-url('logo/opinio-eleph.svg');
+  background-size: 230px 25px;
 }

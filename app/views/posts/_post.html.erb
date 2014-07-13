@@ -62,9 +62,9 @@
             <% end %>  
 
           <% else %>
-            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn vote btn-info', id: "post#{post.id} op1", remote: true %> 
-            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn vote btn-info', id: "post#{post.id} op2", remote: true %> 
-            <%= link_to post.third_option, vote_post_path(post, option: 3), type: 'button', class: 'btn vote btn-info', id: "post#{post.id} op3", remote: true %> 
+            <%= link_to post.first_option, vote_post_path(post, option: 1), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op1", remote: true %> 
+            <%= link_to post.second_option, vote_post_path(post, option: 2), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op2", remote: true %> 
+            <%= link_to post.third_option, vote_post_path(post, option: 3), type: 'button', class: 'btn vote btn-primary', id: "post#{post.id} op3", remote: true %> 
           <% end %>
 
           </div>
