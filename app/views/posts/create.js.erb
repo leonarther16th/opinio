@@ -5,7 +5,7 @@ $("#new-post-btn").removeClass('hider');
 
 //$("<%= escape_javascript(render @post) %>").appendTo(".mywell");
 $('.mywell').before("<%= escape_javascript(render @post) %>");
-$("#post_statement").val('');
+$("#statement_textarea").val('');
 $("#post_first_option").val('');
 $("#post_second_option").val('');
 $("#post_third_option").val('');

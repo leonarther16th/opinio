@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
    before_action :authenticate_user!
+  # include ActionView::Helpers::SanitizeHelper
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -8,6 +10,11 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.user_id = current_user.id
     @votes = current_user.vote
+    
+    #@post.statement = strip_tags(@post.statement)
+    #@tags = %w(a acronym b strong i em li ul ol h1 h2 h3 h4 h5 h6 blockquote br cite sub sup ins p)
+    #@post.statement = sanitize(@post.statement, tags: tags, attributes: %w(href title))
+
   end
 
   # GET /posts/1
@@ -19,6 +26,8 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post.user_id = current_user.id
+    #@post.statement = strip_tags(@post.statement)
+
   end
 
   def vote
